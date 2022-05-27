@@ -1,5 +1,6 @@
-<div class="wrapper">
-  <p>content works!</p>
-</div>
-
-
+<mat-card *ngFor="let post of posts">
+  <mat-card-title>{{post.title}}</mat-card-title>
+  <mat-card-subtitle>{{post.id}}</mat-card-subtitle>
+  <mat-card-content>{{post.body}}</mat-card-content>
+  <button color="primary" mat-raised-button (click)="deletePost(post)">Delete</button>
+</mat-card>

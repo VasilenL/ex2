@@ -12,6 +12,10 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { FriendsActivityComponent } from './friends-activity/friends-activity.component';
 import { MusicComponent } from './music/music.component';
 import { ContentComponent } from './content/content.component';
+import { PromisesComponent } from './promises/promises.component';
+import { ObservablesComponent } from './observables/observables.component';
+import { SubjectsComponent } from './subjects/subjects.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -22,13 +26,17 @@ import { ContentComponent } from './content/content.component';
     SidebarComponent,
     FriendsActivityComponent,
     MusicComponent,
-    ContentComponent
+    ContentComponent,
+    PromisesComponent,
+    ObservablesComponent,
+    SubjectsComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

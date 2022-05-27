@@ -3,13 +3,28 @@ import {RouterModule, Routes} from "@angular/router";
 import {KeklComponent} from "./kekl/kekl.component";
 import {Kekl2Component} from "./kekl2/kekl2.component";
 import {ContentComponent} from "./content/content.component";
+import {PromisesComponent} from "./promises/promises.component";
+import {ObservablesComponent} from "./observables/observables.component";
+import {SubjectsComponent} from "./subjects/subjects.component";
+import {PostsResolver} from "./observables/posts.resolver";
 
 const routes: Routes = [
-  {path: '', redirectTo: 'KEKL', pathMatch: 'full'},
+  {path: '', redirectTo: 'promises', pathMatch: 'full'},
   {
-    path: 'KEKL', component: ContentComponent
+    path: 'promises', component: PromisesComponent
   },
-  {path: 'KEKL2', component: Kekl2Component}
+  {
+    path: 'observables', component: ObservablesComponent,
+    resolve: {
+      postsSuccess: PostsResolver
+    }
+  },
+  {
+    path: 'subjects', component: SubjectsComponent,
+    resolve: {
+      postsSuccess: PostsResolver
+    }
+  }
 ];
 
 @NgModule({

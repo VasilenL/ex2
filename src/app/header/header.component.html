@@ -1,3 +1,9 @@
 <div class="wrapper">
-  <p>header works!</p>
+  <p>Posts count with getter {{postsCount}}</p>
+  <p>Posts count from Promise {{(postsCountFromPromise$ | async)?.length}}</p>
+  <p>Posts count from Behaviour Subject as Observable  {{(postsCountFromState$ | async)?.length}}</p>
+  <p>Posts count from Behaviour Subject {{(postsCountFromState$ | async)?.length}}</p>
+  <button mat-raised-button (click)="refresh()">Refresh the fkin Count</button>
+  <button mat-raised-button (click)="letsBreakTheStateOfTheApp()">Break the app state</button>
+  <button mat-raised-button (click)="letsKillTheAppState()">Kill the app state</button>
 </div>
